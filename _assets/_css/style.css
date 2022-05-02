@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(00, 33, 77, 1);
+}
+
+#login {
+    display: block;
+    position: relative;
+    margin: 14% auto 0 auto;
+    width: 22%;
+    height: 40vh;
+}
+
+#login input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0 auto 5% auto;
+    padding: 12px 5px;
+    width: 90%;
+}
+
+#login input[type=text], input[type=password]{
+    text-indent: 10px;
+}
+
+#login input[type=password]:nth-child(even) {
+    display: block;
+    margin-bottom: 25px;
+}
