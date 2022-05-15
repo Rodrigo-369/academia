@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input#cke {
+	display: none;
+}
+
+.base {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(200, 200 ,200, .1);
+	grid-template-columns: 15% 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: "nav full";
+	transition: all 0.3s ease;
+}
+
+.base nav {
+	background: rgba(0, 9, 128, 1);
+	font-family: "Roboto", sans-serif;
+	width: 100%;
+	left: 0;
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.base nav img {
+	width: 70px;
+	height: 80px;
+	margin: 40px auto 20px auto;
+	position: relative;
+	padding: 10px;
+	display: block;
+}
+
+#cke:checked ~ .base {
+	grid-template-columns: 5% 1fr;
+}
+
+#cke:checked ~ .base nav {
+	width: 90px;
+}
+
+#cke:checked ~ .base .full {
+	width: 100%;
+}
+
+
+
+.base nav h3 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.base nav ul {
+	display: block;
+	text-decoration: none;
+	list-style: none;
+	left: 0;
+	width: 100%;
+}
+
+.base nav ul li {
+	padding: 10px 25px;
+	display: block;
+}
+
+.base nav ul li a i {
+	font-size: 22px;
+}
+
+.base nav ul li a span {
+	padding-left: 30px;
+}
+
+.base nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	display: grid;
+	grid-template-columns: max-content max-content;
+	align-items: center;
+}
+
+.base .full {
+	display: grid;
+	grid-area: full;
+	grid-template-rows: 10% 85% 1fr;
+	grid-template-areas: "header" "section" "footer";
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+
+.base .full header {
+	border-bottom: 1px solid rgba(0, 0, 0, .3);
+}
+
+.base .full section {
+	background-color: white;
+	display: block;
+}
+
+.base .full footer {
+	border-top: 1px solid rgba(0, 0, 0, .3);
+	font-family: "Roboto", sans-serif;
+}
+
+.base .full footer p {
+	text-align: right;
+	margin: 7px 30px 0 30px;
+}

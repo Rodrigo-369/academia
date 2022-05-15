@@ -15,6 +15,4 @@ Abstract class Sql extends PDO{
 
 }
 
-$n = new Sql();
-
 ?>
