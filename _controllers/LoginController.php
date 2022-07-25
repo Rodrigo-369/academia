@@ -1,23 +1,28 @@
 <?php
 namespace Login;
 require_once("CollectionController.php");
+require_once("../_settings/ConfigurationController.php");
 
+use Conf\ConfigurationController;
 use Collection\CollectionController;
 
-class LoginController extends CollectionController {
+class LoginController {
 
     protected $user;
-    protected $password;
+    protected $pass;
  
     public function validateLogin($u = array())
     {
-        //$this->user = $u[0];
-        //$this->password = $u[1];
+        CollectionController::createCollection($u);
+        $this->user = $u[0];
+        $this->pass = $u[1];
 
-        //print_r($u);
-        $this->createCollection($u);
+        ConfigurationController::scapeCommands($this->user);
+        $this->pass = ConfigurationController::scapeCommands($this->pass);
 
-        //return $res = $this->user . $this->password;
+        $this->pass = ConfigurationController::md5Hash($this->pass);
+
+        echo $this->pass;
     }
 
 }
