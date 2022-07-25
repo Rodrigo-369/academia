@@ -7,7 +7,7 @@ class UserController {
     protected $name_user;
     protected $level_user;
 
-    public function getSession($user, $level, $delete_session = '')
+    public function getSession($user, $level)
     {
         session_start();
 

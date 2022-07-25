@@ -2,13 +2,25 @@
 
 namespace Collection;
 
-abstract class CollectionController {
+require_once("../_model/UserModel.php");
 
-    protected $collection = [];
+//use UserModel\UserModel;
 
-    public function createCollection($array = array())
+class CollectionController {
+
+    static public $collection = [];
+
+    public static function createCollection($array = array()):array
     {
-        print_r($this->collection = $array);
+        /*
+            Este método servirá para guardar dados em array para qualquer tipo de coleção de dados
+        */
+
+        if(!is_array($array))
+        {
+            echo "Erro";
+        }
+       return self::$collection = $array;
     }
 
 }
