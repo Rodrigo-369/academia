@@ -12,8 +12,8 @@
 
     <form action="_routes/acesso.php" method="POST" id="login" class="form-label">
         <input type="text" name="user[]"  class="form-control" placeholder="usuário" required>
-        <input type="password" name="user[]" class="form-control" placeholder="senha" required>
-        <input type="submit" value="LogIn" class="btn btn-danger">
+        <!-- <input type="password" name="user[]" class="form-control" placeholder="senha" required>
+        <input type="submit" value="LogIn" class="btn btn-danger"> -->
     </form>
 
 </body>
